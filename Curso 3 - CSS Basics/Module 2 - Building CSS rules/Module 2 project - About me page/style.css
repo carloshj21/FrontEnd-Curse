@@ -1,0 +1,41 @@
+body {
+	background-color: steelblue;
+	margin: 50px;
+}
+
+h1 {
+	background-color: orangered;
+	color: white;
+	font-family: sans-serif;
+	font-size: 3em;
+	padding: 20px;
+}
+
+h2 {
+	color: white;
+	font-family: serif;
+	font-size: 2em;
+}
+
+p {
+	color: white;
+	border: 5px coral dashed;
+	font-size: 1.2em;
+	padding: 20px;
+}
+
+h3 {
+	background-color: coral;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding: 15px;
+}
+
+ol,ul {
+	color: white;
+	border: 3px coral solid;
+}
+
+li{
+	padding: 10px;
+}
