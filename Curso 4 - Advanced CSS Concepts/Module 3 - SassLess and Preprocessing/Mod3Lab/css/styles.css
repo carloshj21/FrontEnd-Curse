@@ -584,6 +584,14 @@ Nav Modules
 
 .nav-primary {
   margin-top: 28px; }
+  @media only screen and (min-width: 48em) {
+    .nav-primary {
+      float: right;
+      width: 60%;
+      text-align: right;
+      margin-top: 0px; }
+      .nav-primary li {
+        display: inline-block; } }
 
 /***************************
 ****************************
