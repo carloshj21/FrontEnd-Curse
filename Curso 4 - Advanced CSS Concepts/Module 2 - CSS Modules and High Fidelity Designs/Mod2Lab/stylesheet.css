@@ -10,9 +10,7 @@ Color List:
 */
 
 /***************************
-****************************
 Reset
-****************************
 ***************************/
 @import 'normalize.css';
 
@@ -25,16 +23,12 @@ html {
 }
 
 /***************************
-****************************
 Base Styles
-****************************
 ***************************/
 
 
 /***************************
-****************************
 Layout Styles
-****************************
 ***************************/
 /* Content Container*/
 .container {
@@ -74,6 +68,10 @@ Layout Styles
   .col-1-3 {
     width: 33.3333%;
   }
+  /* Column Half */
+  .col-1-2 {
+    width: 50%;
+  }
 }
 
 @media (min-width: 48em) {
@@ -90,9 +88,7 @@ Layout Styles
 }
 
 /***************************
-****************************
 Modules
-****************************
 ***************************/
 /*Button Modules*/
 .btn {
@@ -117,14 +113,72 @@ Modules
   color: white;
 }
 
+@media (min-width: 48em) {
+  .btn-primary {
+    font-size: 1.125em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px; 
+  }
+  .btn-primary:hover {
+    background: none;
+    border-color: white;
+    border-width: 1px;
+    animation: Fade;
+    text-decoration: none;
+  }
+}
+
 .btn-nav {
     color: white;
+}
+
+@media (min-width: 48em) {
+  .btn-nav {
+    font-size: 1.125em;
+    background: #8DC63F;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px; 
+  }
+  .btn-nav:hover {
+    background: none;
+    border-color: white;
+    border-width: 1px;
+    animation: Fade;
+    text-decoration: none;
+  }
 }
 
 .btn-primary:hover {
   background: none;
   border-color: white;
   text-decoration: none;
+}
+
+.btn-hero {
+  color: #ffffff;
+  background: none;
+  border-color: #ffffff;
+  border-width: 1px;
+  font-size: 1.750em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.btn-hero:hover,click {
+  animation: Fade;
+  color: #39B54A;
+  background: #ffffff;
+  font-size: 1.750em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 /*Header Modules*/
@@ -161,11 +215,121 @@ Modules
     margin-top: 35px;
 }
 
+/*Hero Modules*/
+.hero {
+    text-align: center;
+}
+
+.hero-primary {
+    background-color: #594a42;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.hero-primary.bg-image > img {
+    opacity: 0.55;
+}
+
+.hero-secondary {
+  background-color: #594a42;
+  color: white;
+  font-size: 1.1em;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hero-secondary.bg-image > img {
+    opacity: 0.40;
+}
+
+@media (min-width: 48em) {
+  .hero-secondary {
+    background-color: #594a42;
+    color: white;
+    font-size: 1.1em;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-secondary.bg-image > img {
+      opacity: 0.40;
+  }
+}
+
+.hero-body {
+    position: relative;
+}
+
+.hero-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 2.625em;
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.500em;
+    font-weight: normal;
+}
+
+.hero-subtitle + button {
+    margin-top: 25px;
+}
+
+/*Background Modules*/
+.bg-image  {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-image > img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  min-width: 100%;
+}
+
+/*Media Object Module*/
+.media, .media-body {
+    overflow:hidden;
+}
+
+.media {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.media-item {
+  float:left;
+  margin-right: 10px;
+  padding-top: 15%; 
+}
+
+.media-item i {
+  color: #594a42;
+  font-size: 6em;
+}
+
+.media-item-secondary {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 48em) {
+  .media-item-secondary {
+    font-size: 2.5em;
+    margin-bottom: 60px;
+  }
+}
 
 /***************************
-****************************
 Theme Styles
-****************************
 ***************************/
 .background-primary {
   background: #F7941E;
@@ -178,4 +342,7 @@ Theme Styles
 }
 .background-quaternary {
   background: #594a42;
+}
+.background-quinary {
+    background: #e7e1d7;
 }
