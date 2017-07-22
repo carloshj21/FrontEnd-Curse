@@ -2,9 +2,11 @@
 @import "base/normalize";
 @import "base/media-queries";
 @import "base/base";
+@import "base/mixins";
 @import "layouts/layout";
 @import "modules/bg-image";
 @import "modules/buttons";
+@import "modules/frame";
 @import "modules/header";
 @import "modules/hero";
 @import "modules/logo";
