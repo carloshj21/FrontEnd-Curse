@@ -1,0 +1,16 @@
+.tag {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+.green {
+    background: $green;
+}
+.orange {
+    background: $orange;
+}
+.brown {
+    background: $background-secondary;
+}
