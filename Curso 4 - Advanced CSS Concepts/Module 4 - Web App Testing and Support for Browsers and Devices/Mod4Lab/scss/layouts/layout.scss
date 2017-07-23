@@ -79,4 +79,9 @@ Layout Styles
       @include flex(0 1 50%);
     }
   }
+  .flexbox-sm-row-reverse {
+    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
 }
