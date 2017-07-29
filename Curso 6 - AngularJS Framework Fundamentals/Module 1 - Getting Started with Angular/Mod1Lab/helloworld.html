@@ -14,6 +14,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
         <script type="text/javascript">
             var helloWorldApp = angular.module('helloWorldApp', []);
+            helloWorldApp.controller = ('firstController', [
+                '$scope',
+                function($scope) {
+                    $scope.appName = 'An App Name';
+                }
+            ]);
         </script>
     </body>
 </html>
