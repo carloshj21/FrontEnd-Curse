@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modal Dialog</title>
+        <link rel='stylesheet' href='./Styles/bootstrap.min.css' />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Alerts -->
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h3>Warning</h3>
+                <div>It appears that something has gone wrong</div>
+            </div>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h3>Success</h3>
+                <div>It appears that something has succeed</div>
+            </div>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h3>Danger</h3>
+                <div>It appears that something has gone dangerous</div>
+            </div>
+            <!-- Form inputs including addons, has/feedback-->
+            <form role="form" class="form-horizontal">
+                <div class="form-group has-error has-feedback">
+                    <label for="facebook" class="control-label col-md-3">Facebook:</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="facebook" id="facebook" />
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-error">
+                    <label for="twitter" class="control-label col-md-3">Twitter:</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span>@</span>
+                            </div>
+                            <input type="text" class="form-control" name="twitter" id="twitter" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label for="username" class="control-label col-md-3">Username:</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                            <input type="text" class="form-control" name="username" id="username" />
+                        </div>
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="form-group">
+                    <div class="col-md-offset-3 btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" id="first" name="sample" checked/>
+                                First
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" id="second" name="sample" />
+                                Second
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default col-md-offset-3 col-md-4">Submit form</button>
+                </div>
+            </form>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary col-md-6 col-md-offset-3" data-toggle="modal" data-target="#exampleModal">
+                Modal Dialog
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+                        </div>
+                        <div class="modal-body">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan luctus elit eget egestas. Sed vulputate tincidunt augue, dictum ultricies sapien dictum ut. 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src='./Scripts/jquery-3.2.1.min.js'></script>
+        <script src='./Scripts/bootstrap.min.js'></script>
+    </body>
+</html>
