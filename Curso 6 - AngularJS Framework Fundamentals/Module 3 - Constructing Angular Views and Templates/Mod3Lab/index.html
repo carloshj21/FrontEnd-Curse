@@ -18,8 +18,8 @@
         <div ng-hide="model.search">
             Enter the search criteria above.
         </div>
-        <div ng-show="model.search">
-            search results
+        <div ng-show="model.search" ng-repeat="t in model.availableToppings">
+            <span ng-click="addTopping(t)">{{t}}</span>
         </div>
     </div>
 
