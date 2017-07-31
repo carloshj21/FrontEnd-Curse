@@ -21,6 +21,10 @@
         <div ng-show="model.search" ng-repeat="t in model.availableToppings">
             <span ng-click="addTopping(t)">{{t}}</span>
         </div>
+        <h3>Selected Toppings</h3>
+        <div ng-repeat="t in model.toppings">
+            {{t}}
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
