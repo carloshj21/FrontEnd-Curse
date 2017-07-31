@@ -12,11 +12,13 @@
         <h1>Tony's Pizza</h1>
 
         <h2>{{model.title}}</h2>
-        
+
         <h3>Topping Search</h3>
         <input type="text" class="form-control" ng-model="model.search">
-
-        <div>
+        <div ng-hide="model.search">
+            Enter the search criteria above.
+        </div>
+        <div ng-show="model.search">
             search results
         </div>
     </div>
