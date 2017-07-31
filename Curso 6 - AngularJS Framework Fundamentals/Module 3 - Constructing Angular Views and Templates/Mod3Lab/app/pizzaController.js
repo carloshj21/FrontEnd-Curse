@@ -8,6 +8,7 @@ app.controller('pizzaController', [
         };
         $scope.addTopping = function (topping) {
             $scope.model.toppings.push(topping);
+            $scope.model.search = null;
         }
     }
 ]);
