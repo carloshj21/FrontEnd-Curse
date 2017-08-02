@@ -13,9 +13,6 @@ app.controller('pizzaController', [
             $scope.model.showAdded = true;
             $scope.model.search = null;
         }
-        $scope.filterTop = function (filter) {
-            $scope.model.filteredToppings.push(filter);
-        }
         console.log($scope.model.filteredToppings.length);
     }
 ]);
