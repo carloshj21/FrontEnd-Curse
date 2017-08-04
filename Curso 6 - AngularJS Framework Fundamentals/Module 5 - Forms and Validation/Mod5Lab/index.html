@@ -85,7 +85,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-5">
-                        <input type="submit" value="Submit" class="btn btn-primary" ng-click="form.$valid && submit(model)" />
+                        <input type="submit" value="Submit" class="btn btn-primary" ng-click="submit(model)" ng-disabled="form.$invalid"/>
                         <button class="btn btn-default">Reset</button>
                     </div>
                 </div>
