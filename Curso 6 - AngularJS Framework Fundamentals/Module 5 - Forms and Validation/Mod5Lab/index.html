@@ -10,6 +10,7 @@
     <body ng-controller="labController">
         <div class="container">
             <h1>New User Registration</h1>
+
             <form class="form-horizontal" name="form" novalidate>
                 <div class="form-group">
                     <div class="col-md-2">
@@ -51,13 +52,13 @@
                     <div class="col-md-5">
                         <input type="number" name="phone" class="form-control" ng-model="model.phone" ng-required="true">
                         <div class="alert alert-danger" ng-show="(form.phone.$touched || form.$submitted) && form.phone.$error.required">
-                            Phone Number is required
+                            Phone is required
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-2">
-                        <label>EmailAddress</label>
+                        <label>Email Address</label>
                     </div>
                     <div class="col-md-5">
                         <input type="email" name="emailAddress" class="form-control" ng-model="model.email" ng-required="true">
@@ -85,15 +86,18 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-5">
-                        <input type="submit" value="Submit" class="btn btn-primary" ng-click="submit(model)" ng-disabled="form.$invalid"/>
+                        <input type="submit" value="Submit" class="btn btn-primary" ng-click="submit(model)" ng-disabled="form.$invalid" />
                         <button class="btn btn-default">Reset</button>
                     </div>
                 </div>
             </form>
+
             <pre>{{model | json}}</pre>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
+        <script src="./app/registrationService.js"></script>
         <script src="./app/app.js"></script>
         <script src="./app/labController.js"></script>
     </body>
