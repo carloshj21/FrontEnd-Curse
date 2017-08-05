@@ -1,5 +1,6 @@
-angular.module('app').controller('sessionController', ['sessionService', 'sessionFactory', sessionController]);
-    function sessionController(sessionService, sessionFactory){
+angular.module('app').controller('sessionController', ['sessionService',
+    function sessionController(sessionService) {
+
         var vm = this;
 
         vm.getServiceSession = function () {
@@ -18,30 +19,28 @@ angular.module('app').controller('sessionController', ['sessionService', 'sessio
             sessionService.clear();
             vm.getServiceSession();
         }
-
-        var mySessionFactory = new sessionFactory();
-
-        vm.getFactorySession = getFactorySession;
-        vm.setFactorySession = setFactorySession;
-        vm.clearFactorySession = clearFactorySession;
-
-        function getFactorySession() {
-            vm.model = {
-                name: mySessionFactory.get('name'),
-                nickname: mySessionFactory.get('nickname'),
-                status: 'Retrieved by Factory on ' + new Date()
-            };
-        }
-
-        function setFactorySession() {
-            mySessionFactory.save('name', vm.model.name);
-            mySessionFactory.save('nickname', vm.model.nickname);
-            getFactorySession();
-        }
-
-        function clearFactorySession() {
-            mySessionFactory.clear();
-            getFactorySession();
-        }
     }
 ]);
+/*angular.module('app').controller('sessionController', ['sessionService', 'sessionFactory', 
+    function sessionController(sessionService, sessionFactory){
+        var vm = this;
+         var mySessionFactory = new sessionFactory();
+
+         vm.getFactorySession = getFactorySession;
+         vm.setFactorySession = setFactorySession;
+         vm.clearFactorySession = clearFactorySession;
+
+        vm.getFactorySession = function () {
+             vm.model = {
+                 name: mySessionFactory.get('name'),
+                 nickname: mySessionFactory.get('nickname'),
+                 status: 'Retrieved by Factory on ' + new Date()
+             };
+         }
+
+         function setFactorySession() {
+         }
+
+         function clearFactorySession() {
+         }
+    }*/
