@@ -39,8 +39,13 @@ angular.module('app').controller('sessionController', ['sessionService',
          }
 
          function setFactorySession() {
+            mySessionFactory.save('name', vm.model.name);
+            mySessionFactory.save('nickname', vm.model.nickname);
+            getFactorySession();
          }
 
          function clearFactorySession() {
+            mySessionFactory.clear();
+            getFactorySession();
          }
     }*/
