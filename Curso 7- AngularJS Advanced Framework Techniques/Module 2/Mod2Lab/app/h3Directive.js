@@ -1,4 +1,4 @@
-angular.module('app').directive('h3MessageDirective', function () {
+angular.module('app').directive('h3Directive', function () {
     return {
         scope: {
             title: '@'
