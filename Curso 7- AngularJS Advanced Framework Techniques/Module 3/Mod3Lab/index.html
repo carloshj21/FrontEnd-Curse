@@ -22,6 +22,7 @@
                 <button type="button" class="btn btn-warning" ng-click="vm.addWarning()">Add Warning</button>
                 <button type="button" class="btn btn-danger" ng-click="vm.addDanger()">Add Danger</button>
             </div>
+            <uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" dismiss-on-timeout="4000" close="vm.dismissAlert($index)">{{alert.text}}</uib-alert>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
