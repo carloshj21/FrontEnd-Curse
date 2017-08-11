@@ -9,8 +9,13 @@
     <body ng-controller="LabController as vm">
         <div class="container">
             <h1>Angular Bootstrap and Animation</h1>
+            <!-- Tooltip -->
             <div class="form-group">
                 <button type="button" uib-tooltip="Click this button to do something amazing." class="btn btn-primary">Hover to show Tooltip</button>
+            </div>
+            <!-- Popover -->
+            <div class="form-group">
+                <button uib-popover="Popover content goes here" popover-title="Popover Title" type="button" class="btn btn-default">Click to show Popover</button>
             </div>
         </div>
 
