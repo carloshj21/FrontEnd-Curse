@@ -6,9 +6,16 @@
             crossorigin="anonymous">
         <base href="/" />
     </head>
-    <body ng-controller="LabController as vm">
+    <body>
         <div class="container">
             <h1>Configuration and Routing</h1>
+            <div class="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/items">Items</a></li>
+                </ul>
+            </div>
+            <div ng-view></div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
