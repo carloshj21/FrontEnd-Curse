@@ -17,7 +17,8 @@ module.exports = function(config) {
     files: [
       { pattern: './node_modules/angular/angular.js', watch: false },
       { pattern: './node_modules/angular-mocks/angular-mocks.js', watch: false },
-      './app/*.js'
+      './app/*.js',
+      './app/*template.html'
     ],
 
 
@@ -29,6 +30,11 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*template.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      moduleName: 'compiled-templates'
     },
 
 
